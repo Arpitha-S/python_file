@@ -6,7 +6,7 @@ url = 'http://localhost:8080/api/v2/import-scan/'
 
 headers = {'Authorization': 'Token d7163c979de993065820c094150109a22c0e916f'}
 
-files = {'file': open('dependency-check-report.xml','rb')}
+files = {'file': open('https://github.com/Arpitha-S/python_file.git/dependency-check-report.xml','rb')}
 
 dia = datetime.today().strftime('%Y-%m-%d')
 print(dia)
