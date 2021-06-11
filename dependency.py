@@ -4,7 +4,7 @@ from datetime import datetime
 
 url = 'http://localhost:8080/api/v2/import-scan/'
 
-headers = {'Authorization': 'Token 8cbb86997405cdf9241ad60e87c0d741cd4ff89c ' ,'username': 'admin' 'password': 'p@ssw0rd'}
+headers = {'Authorization': 'Token 8cbb86997405cdf9241ad60e87c0d741cd4ff89c ' ,'username': 'admin' 'password': '4jLM3bF0FSjCzV3bGhvPrP'}
 files = {'file': open('https://github.com/Arpitha-S/python_file.git/dependency-check-report.xml','rb')}
 
 dia = datetime.today().strftime('%Y-%m-%d')
