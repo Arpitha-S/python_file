@@ -14,8 +14,8 @@ def upload_results(host, user, api_key, scanner, result_file, engagement_id, ver
 	files = dict()
 
 	# Prepare headers
-	# headers = {'Authorization': 'Token 8cbb86997405cdf9241ad60e87c0d741cd4ff89c'}
-	headers['Authorization'] = AUTH_TOKEN
+	headers = {'Authorization': 'Token 8cbb86997405cdf9241ad60e87c0d741cd4ff89c'}
+	#headers['Authorization'] = AUTH_TOKEN
 	print headers
 
 	# Prepare JSON data to send to API
