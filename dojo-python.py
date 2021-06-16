@@ -4,10 +4,11 @@ from datetime import datetime
 import json
 import os
 import requests
+
 def upload_results(host, user, api_key, scanner, result_file, engagement_id, verify=False): # set verify to False if ssl cert is self-signed
-	API_URL = "http://"+host+"/api/v2"
+	API_URL = "http://"+host+"/api/v1"
         IMPORT_SCAN_URL = API_URL+ "/importscan/"
-        AUTH_TOKEN = "Token" + user + ":" + api_key
+        AUTH_TOKEN = "ApiKey " + user + ":" + api_key
 
 	headers = dict()
 	json = dict()
@@ -25,17 +26,17 @@ def upload_results(host, user, api_key, scanner, result_file, engagement_id, ver
 	#   "verified": False,
 	#   "tags": "",
 	#   "active": False,
-	#   "engagement": "/api/v2/engagements/2/",
-	#   "lead":"/api/v2/users/1/",
-	#   "scan_type": "Deoendency-Check Scan"
+	#   "engagement": "/api/v1/engagements/2/",
+	#   "lead":"/api/v1/users/1/",
+	#   "scan_type": "Bandit Scan"
 	# }
 	json['minimum_severity'] = "Low"
 	json['scan_date'] = datetime.now().strftime("%Y-%m-%d")
 	json['verified'] = False
 	json['tags'] = ""
 	json['active'] = False
-	json['engagement'] = "/api/v2/engagements/"+ engagement_id + "/"
-	json['lead'] ="/api/v2/users/"+ "1" + "/"
+	json['engagement'] = "/api/v1/engagements/"+ engagement_id + "/"
+	json['lead'] ="/api/v1/users/"+ "1" + "/"
 	json['scan_type'] = scanner
 	print json
 
